@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP Biblioteca", "APP Biblioteca\APP Biblioteca.csproj", "{32AF3A78-7847-4714-82D0-BDBB09B4E252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32AF3A78-7847-4714-82D0-BDBB09B4E252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AF3A78-7847-4714-82D0-BDBB09B4E252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AF3A78-7847-4714-82D0-BDBB09B4E252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AF3A78-7847-4714-82D0-BDBB09B4E252}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,69 @@
+CREATE DATABASE Biblioteca;
+ 
+USE Biblioteca;
+
+/* DROP all Tables */
+
+DROP TABLE Libro;
+DROP TABLE Autor;
+DROP TABLE Ejemplar;
+DROP TABLE Socio;
+DROP TABLE Casa Editora;
+DROP TABLE Prestamo;
+
+/* Create Tables */
+
+CREATE TABLE Autor (
+	AutorID INT PRIMARY KEY NOT NULL,
+	Nombre		varchar(40) NOT NULL,
+	Nacionalidad	varchar(20) ,
+);
+
+CREATE TABLE Casa_Editora (
+	C_EditID 	INT PRIMARY KEY NOT NULL,
+	Nombre	varchar(50) NOT NULL,
+	Pais	varchar (15) NOT NULL,
+);
+
+CREATE TABLE Libro (
+	LibroID 	BIGINT PRIMARY KEY identity(1,1) NOT NULL,
+	C_EditID 	INT NOT NULL,
+	AutorID 	INT NOT NULL,
+	Titulo	varchar(20) NOT NULL,
+	Edicion	CHAR NOT NULL,
+	Idioma	NCHAR(10) NOT NULL,
+	Resumen	TEXT,
+	Genero	varchar(10) NOT NULL,
+	No_Pags	INT,
+	ISBN	varchar(13),
+	CONSTRAINT
+	Libro_fk FOREIGN KEY (C_EditID)  REFERENCES Casa_Editora
+	Libro_fk FOREIGN KEY (AutorID)  REFERENCES Autor
+);
+
+CREATE TABLE Ejemplar (
+	LibroID INT PRIMARY KEY NOT NULL, 
+	Ubicacion	     varchar(5) NOT NULL,
+	Formato	     varchar(8) NOT NULL,
+	Costo	     INT,
+	CONSTRAINT
+	Ejemplar_fk FOREIGN KEY (Libro_id)  REFERENCES Libro
+);
+
+CREATE TABLE Socio (
+	Cedula	varchar(13) PRIMARY KEY NOT NULL,
+	Nombre	varchar(40) NOT NULL,
+	Telefono_casa	varchar(10) NOT NULL,
+	Telefono_cell	varchar(10),
+	Direccion	TEXT not null,
+	Correo	varchar(40) ,
+);
+CREATE TABLE Prestamo (
+	LibroID INT NOT NULL,
+	Cedula   varchar(15) NOT NULL,
+	Fecha_Start datetime not null,
+	Fecha_End datetime not null
+	CONSTRAINTS
+	Prestamo_fk FOREIGN KEY (Libro_id)  REFERENCES Libro
+	Prestamo_fk FOREIGN KEY (Cedula)  REFERENCES Socio
+);
