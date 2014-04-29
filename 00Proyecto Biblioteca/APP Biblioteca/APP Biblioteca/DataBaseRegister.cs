@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data.SqlClient; 
+
 
 namespace APP_Biblioteca
 {
@@ -64,21 +69,28 @@ namespace APP_Biblioteca
                     pLibro.Idioma = lector.GetString(3);
                     pLibro.Genero = lector.GetString(4);
                     pLibro.ISBN = lector.GetString(5);
+                    //Convirtiendo de int a String
                     int p = lector.GetInt32(6);
                     string paginas = Convert.ToString(p);
                     pLibro.No_Pags = paginas;
-                    //string Paginas = pLibro.No_Pags.ToString();
-                    //Paginas = lector.GetString(6);
-                    //string Volumen = pLibro.Tomo.ToString();
-                    //Volumen = lector.GetString(7);
+                    int v = lector.GetInt32(7);
+                    string volumen = Convert.ToString(v);
+                    pLibro.Tomo = volumen;
                     pLibro.Ubicacion = lector.GetString(8);
                     pLibro.Formato = lector.GetString(9);
-                    //string Valor = pLibro.Costo.ToString();
-                    //Valor = lector.GetString(10);
-         
+                    int pv = lector.GetInt32(10);
+                    string valor = Convert.ToString(pv);
+                    pLibro.Costo = valor;
+        
                     Lista.Add(pLibro);
 
+                    if (pLibro.ISBN == null)
+                    {
+                        MessageBox.Show("Intente nuevamente", "Error ...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+
+
                 Conex.Close();
                 return Lista;
             }

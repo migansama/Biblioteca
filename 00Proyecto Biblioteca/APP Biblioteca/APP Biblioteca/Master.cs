@@ -34,16 +34,16 @@ namespace APP_Biblioteca
             bAddlibro.Show();
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
+        private void Master_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Consulta bConsulta = new Consulta();
             bConsulta.Show();
-        }
-
-        private void Master_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

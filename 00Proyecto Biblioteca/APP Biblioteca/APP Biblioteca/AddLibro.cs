@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Data.SqlServerCe;
-using System.Data.SqlClient; //libreria usada para la conexion a SQL
+using System.Data.SqlClient; 
 
 namespace APP_Biblioteca
 {
@@ -52,7 +51,9 @@ namespace APP_Biblioteca
             Editora Editora = new Editora();
             Editora.Nombre = txtEditora.Text;
             Editora.Pais = txtPais.Text;
-
+            
+            //validacion
+            //if()
             int respuesta = DataBaseRegister.Agregarlibro(libro);
             int respuesta1 = DataBaseRegister.AgregarAutor(Autor);
             int respuesta2 = DataBaseRegister.AgregarEditora(Editora);
@@ -78,7 +79,6 @@ namespace APP_Biblioteca
 
         private void AddLibro_Load(object sender, EventArgs e)
         {
-
 
         }
 
