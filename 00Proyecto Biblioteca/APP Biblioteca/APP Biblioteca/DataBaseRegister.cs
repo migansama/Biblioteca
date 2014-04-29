@@ -64,6 +64,9 @@ namespace APP_Biblioteca
                     pLibro.Idioma = lector.GetString(3);
                     pLibro.Genero = lector.GetString(4);
                     pLibro.ISBN = lector.GetString(5);
+                    int p = lector.GetInt32(6);
+                    string paginas = Convert.ToString(p);
+                    pLibro.No_Pags = paginas;
                     //string Paginas = pLibro.No_Pags.ToString();
                     //Paginas = lector.GetString(6);
                     //string Volumen = pLibro.Tomo.ToString();
