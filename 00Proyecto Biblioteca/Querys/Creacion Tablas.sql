@@ -9,15 +9,17 @@ Titulo varchar(20) not null,
 Edicion char(5) not null,
 Idioma nchar(20) not null,
 Genero varchar(20) not null,
-ISBN varchar(13),
-No_Pags int,
-Volumen int,
+ISBN varchar(13) DEFAULT ' ',
+No_Pags int not null,
+Volumen int  DEFAULT ' ',
 Ubicacion char(5) not null,
 Formato varchar(8) not null,
-Costo int,
+Costo int not null,
 Estado int, -- solo tendrá valores 0/1 para saber si está o no en la biblioteca--
 IDEditora int,
-IDAutor int
+IDAutor int,
+IDPais int,
+IDMoneda int
 )
 --Creando tabla Autor--
 create table Autor
@@ -105,9 +107,17 @@ add IDAutor int
 --Establecer llaves foraneas-- 
 
 ALTER TABLE Prestamo ADD CONSTRAINT FK_Prestamo_IDSocio FOREIGN KEY (IDSocio) REFERENCES Socio(Cedula)
-
+ALTER TABLE Pestamo DROP CONSTRAINT FK_Prestamo_IDSocio
 ALTER TABLE Prestamo ADD CONSTRAINT FK_Prestamo_IDlibro FOREIGN KEY (IDlibro) REFERENCES libro(ID)
-
+ALTER TABLE Prestamo DROP CONSTRAINT FK_Prestamo_IDlibro
 ALTER TABLE Libro ADD CONSTRAINT FK_libro_IDEditora FOREIGN KEY (IDEditora) REFERENCES Casa_Editora(ID)
-
+ALTER TABLE Libro DROP CONSTRAINT FK_libro_IDEditora
 ALTER TABLE Libro ADD CONSTRAINT FK_libro_IDAutor FOREIGN KEY (IDAutor) REFERENCES Autor(ID)
+ALTER TABLE Libro DROP CONSTRAINT FK_libro_IDAutor
+ALTER TABLE Libro ADD CONSTRAINT FK_libro_IDPais FOREIGN KEY (IDPais) REFERENCES Pais(ID)
+ALTER TABLE Libro DROP CONSTRAINT FK_libro_IDPais
+ALTER TABLE Libro ADD CONSTRAINT FK_libro_IDMoneda FOREIGN KEY (IDMoneda) REFERENCES Moneda(ID)
+ALTER TABLE Libro DROP CONSTRAINT FK_libro_IDMoneda
+
+
+

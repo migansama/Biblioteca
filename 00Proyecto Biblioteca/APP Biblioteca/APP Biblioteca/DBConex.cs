@@ -10,8 +10,8 @@ namespace APP_Biblioteca
    public class DBConex
     {
         public static SqlConnection Conexion() //estableciendo conexion con la DB 
-        { 
-        SqlConnection Conex = new SqlConnection(@"Data source = MIGUELANTONIO\SQLEXPRESS; Initial Catalog=Biblioteca; Integrated Security = True"); 
+        {
+        SqlConnection Conex = new SqlConnection(@"Data source = MiguelAntonio\Miguel Antonio; Initial Catalog=Biblioteca; Integrated Security = True"); 
         Conex.Open();
         
         return Conex;

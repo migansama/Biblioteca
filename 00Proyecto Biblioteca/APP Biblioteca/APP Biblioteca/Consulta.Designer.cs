@@ -34,6 +34,8 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(165, 93);
+            this.label2.Location = new System.Drawing.Point(72, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 1;
@@ -70,15 +72,15 @@
             // txtTitulo
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitulo.Location = new System.Drawing.Point(242, 90);
+            this.txtTitulo.Location = new System.Drawing.Point(149, 111);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(396, 31);
+            this.txtTitulo.Size = new System.Drawing.Size(548, 31);
             this.txtTitulo.TabIndex = 3;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(701, 452);
+            this.btnCancelar.Location = new System.Drawing.Point(718, 472);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 40);
             this.btnCancelar.TabIndex = 5;
@@ -89,13 +91,32 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(367, 167);
+            this.btnBuscar.Location = new System.Drawing.Point(718, 83);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(128, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(128, 121);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(72, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Autor:";
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Location = new System.Drawing.Point(149, 156);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(548, 31);
+            this.txtAutor.TabIndex = 9;
             // 
             // Consulta
             // 
@@ -103,6 +124,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(858, 524);
+            this.Controls.Add(this.txtAutor);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtTitulo);
@@ -111,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Consulta";
             this.Text = "Consulta";
+            this.Load += new System.EventHandler(this.Consulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,5 +149,7 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtAutor;
     }
 }

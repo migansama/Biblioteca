@@ -19,12 +19,18 @@ namespace APP_Biblioteca
         public String Ubicacion { get; set; }
         public String Formato { get; set; }
         public String Costo { get; set; }
+        public bool Estado { get; set; }
+        public Int32 IDEdit { get; set; }
+        public Int32 IDAutor { get; set; }
+        public Int32 IDPais { get; set; }
+        public Int32 IDMoneda { get; set; }
            
         public Libro() { }
 
         //Constructor
         public Libro(Int64 xID, String xTitulo, String xISBN, String xEdicion,
-            String xGenero, String xIdioma, String xNo_Pags, String xTomo, String xUbicacion, String xFormato, String xCosto)
+            String xGenero, String xIdioma, String xNo_Pags, String xTomo, String xUbicacion, 
+            String xFormato, String xCosto, Int32 xIDEdit, Int32 xIDAutor, Int32 xIDPais, Int32 xIDMoneda)
         {
             this.ID = xID;
             this.Titulo = xTitulo;
@@ -37,6 +43,11 @@ namespace APP_Biblioteca
             this.Ubicacion = xUbicacion;
             this.Formato = xFormato;
             this.Costo = xCosto;
+            this.Estado = true;
+            this.IDEdit = xIDEdit;
+            this.IDAutor = xIDAutor;
+            this.IDPais = xIDPais;
+            this.IDMoneda = xIDMoneda;
    
         }
     }

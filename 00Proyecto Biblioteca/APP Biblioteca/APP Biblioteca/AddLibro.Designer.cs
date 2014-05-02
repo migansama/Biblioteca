@@ -34,9 +34,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
-            this.txtEdicion = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtIdioma = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.txtPags = new System.Windows.Forms.TextBox();
@@ -45,20 +42,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPais = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtFormato = new System.Windows.Forms.TextBox();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtTomo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbMoneda = new System.Windows.Forms.ComboBox();
+            this.cmbNacionalidad = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.cmbFormato = new System.Windows.Forms.ComboBox();
+            this.cmbEdicion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtTitulo
@@ -73,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(17, 242);
+            this.label2.Location = new System.Drawing.Point(19, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(17, 288);
+            this.label7.Location = new System.Drawing.Point(298, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 25);
             this.label7.TabIndex = 7;
@@ -116,32 +118,11 @@
             this.txtISBN.Size = new System.Drawing.Size(213, 30);
             this.txtISBN.TabIndex = 11;
             // 
-            // txtEdicion
-            // 
-            this.txtEdicion.Location = new System.Drawing.Point(879, 239);
-            this.txtEdicion.Name = "txtEdicion";
-            this.txtEdicion.Size = new System.Drawing.Size(140, 30);
-            this.txtEdicion.TabIndex = 12;
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(104, 239);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(444, 30);
-            this.txtGenero.TabIndex = 14;
-            // 
-            // txtIdioma
-            // 
-            this.txtIdioma.Location = new System.Drawing.Point(104, 285);
-            this.txtIdioma.Name = "txtIdioma";
-            this.txtIdioma.Size = new System.Drawing.Size(213, 30);
-            this.txtIdioma.TabIndex = 15;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnGuardar.Location = new System.Drawing.Point(191, 374);
+            this.btnGuardar.Location = new System.Drawing.Point(190, 400);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(197, 98);
             this.btnGuardar.TabIndex = 17;
@@ -153,7 +134,7 @@
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnVolver.Location = new System.Drawing.Point(645, 375);
+            this.btnVolver.Location = new System.Drawing.Point(644, 401);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(197, 96);
             this.btnVolver.TabIndex = 18;
@@ -163,16 +144,16 @@
             // 
             // txtPags
             // 
-            this.txtPags.Location = new System.Drawing.Point(427, 285);
+            this.txtPags.Location = new System.Drawing.Point(127, 285);
             this.txtPags.Name = "txtPags";
-            this.txtPags.Size = new System.Drawing.Size(55, 30);
+            this.txtPags.Size = new System.Drawing.Size(151, 30);
             this.txtPags.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(323, 288);
+            this.label6.Location = new System.Drawing.Point(23, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 25);
             this.label6.TabIndex = 6;
@@ -215,13 +196,6 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Nacionalidad:";
             // 
-            // txtNacionalidad
-            // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(625, 150);
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(394, 30);
-            this.txtNacionalidad.TabIndex = 23;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -249,13 +223,6 @@
             this.label10.TabIndex = 26;
             this.label10.Text = "País:";
             // 
-            // txtPais
-            // 
-            this.txtPais.Location = new System.Drawing.Point(616, 194);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(403, 30);
-            this.txtPais.TabIndex = 27;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -277,22 +244,15 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(488, 288);
+            this.label12.Location = new System.Drawing.Point(284, 288);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 25);
             this.label12.TabIndex = 30;
             this.label12.Text = "Formato:";
             // 
-            // txtFormato
-            // 
-            this.txtFormato.Location = new System.Drawing.Point(584, 285);
-            this.txtFormato.Name = "txtFormato";
-            this.txtFormato.Size = new System.Drawing.Size(201, 30);
-            this.txtFormato.TabIndex = 31;
-            // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(879, 285);
+            this.txtCosto.Location = new System.Drawing.Point(645, 285);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(140, 30);
             this.txtCosto.TabIndex = 32;
@@ -301,7 +261,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(791, 288);
+            this.label13.Location = new System.Drawing.Point(557, 288);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 25);
             this.label13.TabIndex = 33;
@@ -335,26 +295,135 @@
             this.label15.TabIndex = 36;
             this.label15.Text = "Agregar Libro";
             // 
+            // cmbPais
+            // 
+            this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Location = new System.Drawing.Point(625, 197);
+            this.cmbPais.Name = "cmbPais";
+            this.cmbPais.Size = new System.Drawing.Size(394, 33);
+            this.cmbPais.TabIndex = 37;
+            this.cmbPais.Text = "Pais de la Casa Editora";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(791, 285);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(90, 25);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Moneda:";
+            // 
+            // cmbMoneda
+            // 
+            this.cmbMoneda.FormattingEnabled = true;
+            this.cmbMoneda.Location = new System.Drawing.Point(888, 285);
+            this.cmbMoneda.Name = "cmbMoneda";
+            this.cmbMoneda.Size = new System.Drawing.Size(131, 33);
+            this.cmbMoneda.TabIndex = 40;
+            this.cmbMoneda.Text = "Moneda";
+            // 
+            // cmbNacionalidad
+            // 
+            this.cmbNacionalidad.FormattingEnabled = true;
+            this.cmbNacionalidad.Location = new System.Drawing.Point(625, 147);
+            this.cmbNacionalidad.Name = "cmbNacionalidad";
+            this.cmbNacionalidad.Size = new System.Drawing.Size(394, 33);
+            this.cmbNacionalidad.TabIndex = 41;
+            this.cmbNacionalidad.Text = "Nacionalidad del Autor";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Contabilidad",
+            "Informática",
+            "Matemáticas",
+            "Pedagogía",
+            "Economía"});
+            this.cmbGenero.Location = new System.Drawing.Point(118, 239);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(160, 33);
+            this.cmbGenero.TabIndex = 42;
+            this.cmbGenero.Text = "Tema";
+            // 
+            // cmbIdioma
+            // 
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Items.AddRange(new object[] {
+            "Español",
+            "Inglés",
+            "Francés"});
+            this.cmbIdioma.Location = new System.Drawing.Point(382, 239);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(166, 33);
+            this.cmbIdioma.TabIndex = 43;
+            this.cmbIdioma.Text = "Idioma";
+            // 
+            // cmbFormato
+            // 
+            this.cmbFormato.FormattingEnabled = true;
+            this.cmbFormato.Items.AddRange(new object[] {
+            "Físico",
+            "Digital",
+            "CD",
+            "Revista"});
+            this.cmbFormato.Location = new System.Drawing.Point(382, 282);
+            this.cmbFormato.Name = "cmbFormato";
+            this.cmbFormato.Size = new System.Drawing.Size(166, 33);
+            this.cmbFormato.TabIndex = 44;
+            this.cmbFormato.Text = "Formato";
+            // 
+            // cmbEdicion
+            // 
+            this.cmbEdicion.FormattingEnabled = true;
+            this.cmbEdicion.Items.AddRange(new object[] {
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "8va",
+            "9na",
+            "10ma",
+            "11va",
+            "12va",
+            "13va",
+            "14va",
+            "15va"});
+            this.cmbEdicion.Location = new System.Drawing.Point(888, 239);
+            this.cmbEdicion.Name = "cmbEdicion";
+            this.cmbEdicion.Size = new System.Drawing.Size(131, 33);
+            this.cmbEdicion.TabIndex = 45;
+            this.cmbEdicion.Text = "# de Edición";
+            // 
             // AddLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1033, 546);
+            this.Controls.Add(this.cmbEdicion);
+            this.Controls.Add(this.cmbFormato);
+            this.Controls.Add(this.cmbIdioma);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.cmbNacionalidad);
+            this.Controls.Add(this.cmbMoneda);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.cmbPais);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtTomo);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtFormato);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtUbicacion);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtPais);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtEditora);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.label3);
@@ -362,9 +431,6 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtPags);
-            this.Controls.Add(this.txtIdioma);
-            this.Controls.Add(this.txtGenero);
-            this.Controls.Add(this.txtEdicion);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -392,9 +458,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtISBN;
-        private System.Windows.Forms.TextBox txtEdicion;
-        private System.Windows.Forms.TextBox txtGenero;
-        private System.Windows.Forms.TextBox txtIdioma;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtPags;
@@ -403,20 +466,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtUbicacion;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtFormato;
         private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtTomo;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbMoneda;
+        private System.Windows.Forms.ComboBox cmbNacionalidad;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.ComboBox cmbFormato;
+        private System.Windows.Forms.ComboBox cmbEdicion;
     }
 }
 

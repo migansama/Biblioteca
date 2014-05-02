@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master));
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Prestar = new System.Windows.Forms.Button();
@@ -71,36 +69,6 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnModificar.BackColor = System.Drawing.Color.Azure;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(26, 319);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(163, 52);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnEliminar.BackColor = System.Drawing.Color.Azure;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(407, 319);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(163, 52);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -109,7 +77,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(407, 428);
+            this.btnCerrar.Location = new System.Drawing.Point(407, 340);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(163, 52);
             this.btnCerrar.TabIndex = 5;
@@ -138,7 +106,7 @@
             this.Prestar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Prestar.Image = ((System.Drawing.Image)(resources.GetObject("Prestar.Image")));
             this.Prestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Prestar.Location = new System.Drawing.Point(26, 428);
+            this.Prestar.Location = new System.Drawing.Point(26, 340);
             this.Prestar.Name = "Prestar";
             this.Prestar.Size = new System.Drawing.Size(163, 52);
             this.Prestar.TabIndex = 7;
@@ -185,8 +153,6 @@
             this.Controls.Add(this.Prestar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.Name = "Master";
@@ -202,8 +168,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Prestar;

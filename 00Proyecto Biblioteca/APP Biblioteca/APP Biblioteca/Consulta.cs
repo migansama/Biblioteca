@@ -28,5 +28,10 @@ namespace APP_Biblioteca
             Master mlibro = new Master();
             mlibro.Show();
         }
+
+        private void Consulta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace APP_Biblioteca
     public class DataBaseRegister
     {
         //Funciones para guardar los datos del libro como un string
-
+        //Agregando datos de libro
         public static int Agregarlibro(Libro xLibro)
         {
             int retorno = 0;
@@ -27,6 +27,7 @@ namespace APP_Biblioteca
             }
             return retorno;
         }
+        //Agregando datos de Autor
         public static int AgregarAutor(Autor xAutor)
         {
             int retorno = 0;
@@ -38,6 +39,7 @@ namespace APP_Biblioteca
             }
             return retorno;
         }
+        //Agregando datos de Editora
         public static int AgregarEditora(Editora xEditora)
         {
             int retorno = 0;
@@ -49,20 +51,20 @@ namespace APP_Biblioteca
             }
             return retorno;
         }
-
+        //Lista para consultar los libros
         public static List<Libro> Consultar(String pTitulo)
         {
-            List<Libro> Lista = new List<Libro>();
+            List<Libro> Lista = new List<Libro>(); //Creando Lista
+            //Proceso de Conexion con la DataB
             using (SqlConnection Conex = DBConex.Conexion())
             {
                 SqlCommand Comando = new SqlCommand(string.Format(
-                "Select ID, Titulo, Edicion, Idioma, Genero, ISBN, No_Pags, Volumen, Ubicacion , Formato, Costo from Libro where Titulo like '%{0}%'", pTitulo), Conex);
-
+                "Select ID, Titulo, Edicion, Idioma, Genero, ISBN, No_Pags, Volumen, Ubicacion, Formato, Costo, Estado from Libro where Titulo like '%{0}%'",pTitulo), Conex);
                 SqlDataReader lector = Comando.ExecuteReader();
-
                 while (lector.Read())
                 {
-                    Libro pLibro = new Libro();
+                    Libro pLibro = new Libro(); //Crea nueva instancia
+
                     pLibro.ID = lector.GetInt64(0);
                     pLibro.Titulo = lector.GetString(1);
                     pLibro.Edicion = lector.GetString(2);
@@ -81,16 +83,29 @@ namespace APP_Biblioteca
                     int pv = lector.GetInt32(10);
                     string valor = Convert.ToString(pv);
                     pLibro.Costo = valor;
-        
-                    Lista.Add(pLibro);
-
-                    if (pLibro.ISBN == null)
-                    {
-                        MessageBox.Show("Intente nuevamente", "Error ...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    Lista.Add(pLibro); //Agregando valores a la lista
                 }
+                Conex.Close(); //Cerrando la conexion
+                return Lista;
+            }
+        }
+        //Poblando Boxes
+        public static List<Pais> ObtenerPaises()
+        {
+            List<Pais> Lista = new List<Pais>(); //Creando Lista
+            //Proceso de Conexion con la DataB
+            using (SqlConnection Conex = DBConex.Conexion())
+            {
+                SqlCommand Comando = new SqlCommand("select ID, Name from Pais", Conex);
+                SqlDataReader lector = Comando.ExecuteReader();
 
-
+                while (lector.Read()) //Mientras se lea algo, ejecutar
+                {
+                    Pais pPais = new Pais(); //Crea nueva instancia
+                    pPais.ID = lector.GetInt32(0);
+                    pPais.Name = lector.GetString(1);
+                    Lista.Add(pPais); //Agregando Pais a el combobox
+                }
                 Conex.Close();
                 return Lista;
             }

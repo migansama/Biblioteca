@@ -34,23 +34,24 @@ namespace APP_Biblioteca
         {
             Libro libro = new Libro();
             libro.Titulo = txtTitulo.Text;
-            libro.Edicion = txtEdicion.Text;
-            libro.Idioma = txtIdioma.Text;
-            libro.Genero = txtGenero.Text;
+            libro.Edicion = cmbEdicion.SelectedText;
+            libro.Idioma = cmbIdioma.SelectedText;
+            libro.Genero = cmbGenero.SelectedText;
             libro.ISBN = txtISBN.Text;
             libro.No_Pags = txtPags.Text;
             libro.Tomo = txtTomo.Text;
             libro.Ubicacion = txtUbicacion.Text;
-            libro.Formato = txtFormato.Text;
+            libro.Formato = cmbFormato.SelectedText;
             libro.Costo = txtCosto.Text;
 
             Autor Autor = new Autor();
             Autor.Nombre = txtAutor.Text;
-            Autor.Nacionalidad = txtNacionalidad.Text;
+            Autor.Nacionalidad = cmbNacionalidad.Text;
 
             Editora Editora = new Editora();
             Editora.Nombre = txtEditora.Text;
-            Editora.Pais = txtPais.Text;
+            Editora.Pais = cmbPais.Text;
+
             
             //validacion
             //if()
@@ -79,7 +80,14 @@ namespace APP_Biblioteca
 
         private void AddLibro_Load(object sender, EventArgs e)
         {
+            /*cmbPais.DataSource = DataBaseRegister.ObtenerPaises();
+            cmbPais.DisplayMember = "Name";
+            cmbPais.ValueMember = "ID";
+            cmbNacionalidad.DataSource = DataBaseRegister.ObtenerPaises();
+            cmbNacionalidad.DisplayMember = "Name";
+            cmbNacionalidad.ValueMember = "ID";*/
 
+            //esto no esta cargando
         }
 
         private void txtTitulo_TextChanged(object sender, EventArgs e)
