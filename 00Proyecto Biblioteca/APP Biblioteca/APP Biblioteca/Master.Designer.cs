@@ -34,9 +34,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Prestar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsultar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,12 +54,13 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnRegistrar.BackColor = System.Drawing.Color.Azure;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(26, 204);
+            this.btnRegistrar.Location = new System.Drawing.Point(86, 265);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(163, 52);
             this.btnRegistrar.TabIndex = 1;
@@ -77,7 +76,7 @@
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(407, 340);
+            this.btnCerrar.Location = new System.Drawing.Point(337, 380);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(163, 52);
             this.btnCerrar.TabIndex = 5;
@@ -106,24 +105,13 @@
             this.Prestar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Prestar.Image = ((System.Drawing.Image)(resources.GetObject("Prestar.Image")));
             this.Prestar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Prestar.Location = new System.Drawing.Point(26, 340);
+            this.Prestar.Location = new System.Drawing.Point(86, 380);
             this.Prestar.Name = "Prestar";
             this.Prestar.Size = new System.Drawing.Size(163, 52);
             this.Prestar.TabIndex = 7;
             this.Prestar.Text = "Prestar";
             this.Prestar.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(221, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 276);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.Prestar.Click += new System.EventHandler(this.Prestar_Click);
             // 
             // btnConsultar
             // 
@@ -133,7 +121,7 @@
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(407, 204);
+            this.btnConsultar.Location = new System.Drawing.Point(337, 265);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(163, 52);
             this.btnConsultar.TabIndex = 9;
@@ -149,16 +137,15 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(582, 530);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Prestar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(750, 730);
             this.Name = "Master";
-            this.Text = "APP Biblioteca";
+            this.Text = "Biblioteca Diaz v0.4";
             this.Load += new System.EventHandler(this.Master_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +158,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Prestar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnConsultar;
     }
 }

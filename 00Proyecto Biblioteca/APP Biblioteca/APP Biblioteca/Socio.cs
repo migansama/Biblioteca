@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 
 namespace APP_Biblioteca
 {
@@ -24,7 +29,8 @@ namespace APP_Biblioteca
             this.Nombre = xNombre;
             this.Telefono_Casa = xTelefono_Casa;
             this.Telefono_Cell = xTelefono_Cell;
-
+            this.Direccion = xDireccion;
+            this.Correo = xCorreo;
         }
     }
 }

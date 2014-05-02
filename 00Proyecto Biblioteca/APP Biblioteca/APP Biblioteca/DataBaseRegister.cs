@@ -51,6 +51,30 @@ namespace APP_Biblioteca
             }
             return retorno;
         }
+        //Agregando datos de Socio
+        public static int AgregarSocio(Socio xSocio)
+        {
+            int retorno = 0;
+            using (SqlConnection Conex = DBConex.Conexion())
+            {
+                SqlCommand Comando = new SqlCommand(string.Format("Insert Into Socio (Cedula, Nombre, TelefonoCasa, TelefonoCell, Direccion, Correo) values ('{0}','{1}','{2}','{3}','{4}','{5}')",
+               xSocio.Cedula, xSocio.Nombre, xSocio.Telefono_Casa, xSocio.Telefono_Cell, xSocio.Direccion, xSocio.Correo), Conex);
+                retorno = Comando.ExecuteNonQuery();
+            }
+            return retorno;
+        }
+        //Agregando prestamo
+        public static int Prestarlibro(Libro xLibro, Socio xSocio, Prestamo xPrestamo)
+        {
+            int retorno = 0;
+            using (SqlConnection Conex = DBConex.Conexion())
+            {
+                SqlCommand Comando = new SqlCommand(string.Format("Insert Into Prestamo (FechaInicio, FechaFin, IDSocio, IDlibro) values ('{0}','{1}','{2}','{3}')",
+                xPrestamo.Fecha_Inicio, xPrestamo.Fecha_Fin, xSocio.Cedula, xLibro.ID), Conex);
+                retorno = Comando.ExecuteNonQuery();
+            }
+            return retorno;
+        }
         //Lista para consultar los libros
         public static List<Libro> Consultar(String pTitulo)
         {

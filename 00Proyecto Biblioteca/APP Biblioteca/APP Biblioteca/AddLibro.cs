@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient; 
 
+
+
 namespace APP_Biblioteca
 {
     public partial class AddLibro : Form
@@ -46,15 +48,12 @@ namespace APP_Biblioteca
 
             Autor Autor = new Autor();
             Autor.Nombre = txtAutor.Text;
-            Autor.Nacionalidad = cmbNacionalidad.Text;
+            Autor.Nacionalidad = cmbNacionalidad.SelectedText;
 
             Editora Editora = new Editora();
             Editora.Nombre = txtEditora.Text;
-            Editora.Pais = cmbPais.Text;
+            Editora.Pais = cmbPais.SelectedText;
 
-            
-            //validacion
-            //if()
             int respuesta = DataBaseRegister.Agregarlibro(libro);
             int respuesta1 = DataBaseRegister.AgregarAutor(Autor);
             int respuesta2 = DataBaseRegister.AgregarEditora(Editora);

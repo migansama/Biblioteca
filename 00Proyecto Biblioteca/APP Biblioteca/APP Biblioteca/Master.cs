@@ -45,5 +45,12 @@ namespace APP_Biblioteca
             Consulta bConsulta = new Consulta();
             bConsulta.Show();
         }
+
+        private void Prestar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prestar bPrestar = new Prestar();
+            bPrestar.Show();
+        }
     }
 }

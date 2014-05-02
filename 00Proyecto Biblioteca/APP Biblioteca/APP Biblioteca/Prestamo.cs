@@ -8,12 +8,12 @@ namespace APP_Biblioteca
 {
     public class Prestamo //Estableciendo valores
     {
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Fin { get; set; }
+        public String Fecha_Inicio { get; set; }
+        public String Fecha_Fin { get; set; }
         public Prestamo() { }
 
         //Constructor
-        public Prestamo(DateTime xFecha_Inicio, DateTime xFecha_Fin)
+        public Prestamo(String xFecha_Inicio, String xFecha_Fin)
         {
             this.Fecha_Inicio= xFecha_Inicio;
             this.Fecha_Fin = xFecha_Fin;

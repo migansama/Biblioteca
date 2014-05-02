@@ -61,6 +61,7 @@
             this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.cmbFormato = new System.Windows.Forms.ComboBox();
             this.cmbEdicion = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTitulo
@@ -399,12 +400,23 @@
             this.cmbEdicion.TabIndex = 45;
             this.cmbEdicion.Text = "# de Edición";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1025, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 34);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // AddLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1033, 546);
+            this.ClientSize = new System.Drawing.Size(1076, 539);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbEdicion);
             this.Controls.Add(this.cmbFormato);
             this.Controls.Add(this.cmbIdioma);
@@ -485,6 +497,7 @@
         private System.Windows.Forms.ComboBox cmbIdioma;
         private System.Windows.Forms.ComboBox cmbFormato;
         private System.Windows.Forms.ComboBox cmbEdicion;
+        private System.Windows.Forms.Button button1;
     }
 }
 
